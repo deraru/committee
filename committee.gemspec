@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = "committee"
-  s.version       = "2.5.1"
+  s.version       = "2.5.1.1"
 
   s.summary       = "A collection of Rack middleware to support JSON Schema."
 
@@ -16,14 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "json_schema", "~> 0.14", ">= 0.14.3"
 
-  # Rack 2.0+ requires Ruby >= 2.2.2 which is problematic for the test suite on
-  # older Ruby versions. Check Ruby the version here and put a maximum
-  # constraint on Rack if necessary.
-  if RUBY_VERSION >= '2.2.2'
-    s.add_dependency "rack", ">= 2.0.6"
-  else
-    s.add_dependency "rack", ">= 1.6.11", "< 2.0"
-  end
+  s.add_dependency "rack", ">= 1.6.11", "< 2.0"
 
   s.add_development_dependency "minitest", "~> 5.3"
   s.add_development_dependency "rack-test", "~> 0.6"
